@@ -1,0 +1,9 @@
+@import "./../../index.scss";
+
+.ShakingTree {
+  width: 375px;
+  height: 667px;
+  background-color: $background-color;
+  border-radius: 15px;
+  overflow: hidden;
+}

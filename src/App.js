@@ -1,7 +1,9 @@
+import ShakingTree from "./pages/ShakingTree"
+
 const App = () => {
   return (
     <div className="App">
-      Shaking Tree
+      <ShakingTree />
     </div>
   );
 }
