@@ -1,0 +1,10 @@
+.Basket {
+  background-image: url("./Basket.svg");
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 235px;
+  height: 97px;
+  z-index: 1;
+  bottom: -50px;
+}

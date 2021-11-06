@@ -1,9 +1,37 @@
 .Tree {
   background-image: url("./Tree.svg");
   width: 460px;
+  min-width: 460px;
   height: 484px;
+  min-height: 484px;
   position: relative;
   left: 50%;
-  top: -100px;
   transform: translateX(-50%);
+  top: -100px;
+  z-index: 1;
+}
+
+.Tree:hover {
+  animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(-50%);
+  // backface-visibility: hidden;
+  // perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translateX(-49%);
+  }
+  
+  20%, 80% {
+    transform: translateX(-52%);
+  }
+
+  30%, 50%, 70% {
+    transform: translateX(-46%);
+  }
+
+  40%, 60% {
+    transform: translateX(-54%);
+  }
 }
