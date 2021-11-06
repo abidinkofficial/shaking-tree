@@ -4,19 +4,8 @@
   width: 375px;
   height: 667px;
   background-color: $background-color;
+  background-image: url("./Background.svg");
   border-radius: 15px;
   overflow: hidden;
   position: absolute;
-}
-
-.Ground {
-  display: block;
-  position: relative;
-  width: 510px;
-  min-width: 510px;
-  height: 380px;
-  min-height: 380px;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 260px;
 }
