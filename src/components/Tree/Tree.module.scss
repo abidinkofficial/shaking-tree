@@ -8,30 +8,53 @@
   left: 50%;
   transform: translateX(-50%);
   top: -100px;
-  z-index: 1;
 }
 
 .Tree:hover {
-  animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
+  animation: shake 3s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(-50%);
   // backface-visibility: hidden;
   // perspective: 1000px;
 }
 
 @keyframes shake {
-  10%, 90% {
+  5%, 95% {
     transform: translateX(-49%);
   }
   
-  20%, 80% {
+  10%, 90% {
     transform: translateX(-52%);
   }
 
-  30%, 50%, 70% {
+  15%, 85% {
+    transform: translateX(-46%);
+  }
+
+  20%, 80% {
+    transform: translateX(-54%);
+  }
+
+  25%, 75% {
+    transform: translateX(-46%);
+  }
+  
+  30%, 70% {
+    transform: translateX(-54%);
+  }
+
+  35%, 65% {
     transform: translateX(-46%);
   }
 
   40%, 60% {
+    transform: translateX(-54%);
+  }
+
+  45%, 55% {
+    transform: translateX(-46%);
+  }
+
+  50% {
     transform: translateX(-54%);
   }
 }
