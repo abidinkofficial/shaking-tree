@@ -1,14 +1,26 @@
-import { useSelector } from "react-redux"
+import { useEffect } from "react"
+import { useSelector, useDispatch } from "react-redux"
+import { dropApple } from "../../actions/applicationActions"
 import styles from "./Tree.module.scss"
 
 import Apple from "../Apple"
 
 const Tree = () => {
-  const { shakingTree } = useSelector(state => state.applicationState)
+  const { 
+    shakingTree,
+    shakingTreeSuccess,
+    dropAppleStatus,
+    dropAppleStatusSuccess } = useSelector(state => state.applicationState)
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    shakingTreeSuccess && dispatch(dropApple())
+    // eslint-disable-next-line
+  }, [shakingTreeSuccess])
 
   return (
     <div className={`${styles.Tree} ${shakingTree ? styles.ShakingAnimation : ""}`}>
-      <Apple />
+      { !dropAppleStatusSuccess && <Apple dropAppleStatus={dropAppleStatus} dropAppleStatusSuccess={dropAppleStatusSuccess} /> }
     </div>
   )
 }

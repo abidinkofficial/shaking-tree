@@ -6,3 +6,29 @@
   margin: 0 auto;
   background: url("./Apple.svg");
 }
+
+.Dropping {
+  animation: drop 1.5s linear;
+  transform: translate3d(-50%);
+}
+
+.Dropped {
+  position: absolute;
+  height: 30px;
+  top: -30px;
+  left: 30px;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(0px);
+  }
+
+  33% {
+    transform: translateY(376px);
+  }
+
+  100% {
+    transform: translateY(376px);
+  }
+}
