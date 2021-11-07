@@ -6,21 +6,28 @@ import styles from "./Tree.module.scss"
 import Apple from "../Apple"
 
 const Tree = () => {
-  const { 
-    shakingTree,
-    shakingTreeSuccess,
-    dropAppleStatus,
-    dropAppleStatusSuccess } = useSelector(state => state.applicationState)
+  const {
+    shakingTree, shakingTreeSuccess, apples } = useSelector(state => state.applicationState)
   const dispatch = useDispatch()
 
   useEffect(() => {
-    shakingTreeSuccess && dispatch(dropApple())
+    if (shakingTreeSuccess) {
+      dispatch(dropApple(2))
+      setTimeout(() => {
+        dispatch(dropApple(1))
+        setTimeout(() => {
+          dispatch(dropApple(0))
+        }, 300)
+      }, 300)
+    }
     // eslint-disable-next-line
   }, [shakingTreeSuccess])
 
   return (
     <div className={`${styles.Tree} ${shakingTree ? styles.ShakingAnimation : ""}`}>
-      { !dropAppleStatusSuccess && <Apple dropAppleStatus={dropAppleStatus} dropAppleStatusSuccess={dropAppleStatusSuccess} /> }
+      <div className={styles.Apples}>
+        {apples.map(apple => !apple.basket && <Apple apple={apple} key={apple.id} />)}
+      </div>
     </div>
   )
 }

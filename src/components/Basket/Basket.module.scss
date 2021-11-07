@@ -7,7 +7,15 @@
   transform: translateX(-50%);
   width: 235px;
   height: 97px;
-  bottom: -50px;
+  bottom: 50px;
+
+  .Apples {
+    display: flex;
+    justify-content: flex-start;
+    width: 180px;
+    margin: 0 auto;
+    height: 30px;
+  }
 
   button {
     width: fit-content;
@@ -15,7 +23,7 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    top: 35%;
+    top: 5%;
     padding: 5px;
     background: $basket-light;
     border: none;

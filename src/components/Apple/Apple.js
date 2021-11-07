@@ -1,9 +1,11 @@
 import styles from "./Apple.module.scss"
 
-const Apple = ({ dropAppleStatus, dropAppleStatusSuccess }) => {
+const Apple = ({ apple }) => {
+  const { dropping, dropped, basket } = apple
+   
   return (
-    <div className={`${styles.Apple} ${dropAppleStatus ? styles.Dropping : ""} ${dropAppleStatusSuccess ? styles.Dropped : ""}`}>
-
+    <div className={`${styles.Apple} ${dropping ? styles.Dropping : ""} ${dropped ? styles.Dropped : ""} ${basket ? styles.Basket : ""}`}>
+    
     </div>
   )
 }

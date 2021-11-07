@@ -4,12 +4,14 @@ import Apple from "../Apple"
 import styles from "./Basket.module.scss"
 
 const Basket = () => {
-  const { dropAppleStatusSuccess } = useSelector(state => state.applicationState)
+  const { apples } = useSelector(state => state.applicationState)
   const dispatch = useDispatch()
 
   return (
     <div className={styles.Basket}>
-      { dropAppleStatusSuccess && <Apple dropAppleStatusSuccess={dropAppleStatusSuccess} /> }
+      <div className={styles.Apples}>
+        {apples.map(apple => apple.basket && <Apple apple={apple} key={apple.id} />)}
+      </div>
       <button onClick={() => dispatch(shakeTree())}>Click to shake & collect</button>
     </div>
   )

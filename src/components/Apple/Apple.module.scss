@@ -2,30 +2,30 @@
   position: relative;
   top: 124px;
   width: 50px;
+  margin: 0 25px;
   height: 50px;
-  margin: 0 auto;
   background: url("./Apple.svg");
 }
 
 .Dropping {
-  animation: drop 1.5s linear;
+  animation: drop .5s linear;
   transform: translate3d(-50%);
 }
 
 .Dropped {
-  position: absolute;
+  position: relative;
+  transform: translateY(376px);
+}
+
+.Basket {
+  transform: translateY(-154px);
+  margin: 0 5px;
   height: 30px;
-  top: -30px;
-  left: 30px;
 }
 
 @keyframes drop {
   0% {
     transform: translateY(0px);
-  }
-
-  33% {
-    transform: translateY(376px);
   }
 
   100% {
