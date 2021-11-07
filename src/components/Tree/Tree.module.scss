@@ -10,7 +10,7 @@
   top: -100px;
 }
 
-.Tree:hover {
+.ShakingAnimation {
   animation: shake 3s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(-50%);
   // backface-visibility: hidden;
