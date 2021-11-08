@@ -1,11 +1,11 @@
 @import "./../../index.scss";
 
 .ShakingTree {
+  position: absolute;
   width: 375px;
   height: 667px;
+  overflow: hidden;
   background-color: $background-color;
   background-image: url("./Background.svg");
   border-radius: 15px;
-  overflow: hidden;
-  position: absolute;
 }

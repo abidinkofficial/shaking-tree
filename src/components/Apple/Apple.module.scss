@@ -2,18 +2,16 @@
   position: relative;
   top: 124px;
   width: 50px;
-  margin: 0 25px;
   height: 50px;
+  margin: 0 25px;
   background: url("./Apple.svg");
 }
 
 .Dropping {
   animation: drop .5s linear;
-  transform: translate3d(-50%);
 }
 
 .Dropped {
-  position: relative;
   transform: translateY(376px);
 }
 

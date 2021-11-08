@@ -10,17 +10,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center-center;
 }
 
 .App {
+  @include flex-center-center;
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 // Colors
@@ -33,3 +29,18 @@ $apple-leaf-color: #ADE7BD;
 $apple-stem-color: #BD8964;
 $basket-dark: #5F3A25;
 $basket-light: #A87253;
+
+// Mixins
+@mixin center-in-relative {
+  left: 50%;
+  transform: translateX(-50%);
+}
+@mixin flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
