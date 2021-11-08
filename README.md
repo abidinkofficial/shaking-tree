@@ -12,3 +12,7 @@
 * React
 * Redux (react-redux, redux-thunk)
 * Sass (node-sass)
+
+## Komponentler için hazırlanan tasarım dosyası
+
+[https://www.figma.com/file/4sIYdj2KyQEgRTVa2Uv31z/shaking-tree-abidinkofficial?node-id=0%3A1](https://www.figma.com/file/4sIYdj2KyQEgRTVa2Uv31z/shaking-tree-abidinkofficial?node-id=0%3A1)
