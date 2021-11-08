@@ -11,7 +11,11 @@ export const dropAppleToBasketAction = (id) => ({ type: DROP_APPLE_TO_BASKET_ACT
 export const dropApple = (id) => {
   return async (dispatch) => {
     dispatch(dropAppleAction(id))
-    setTimeout(() => dispatch(dropAppleActionSuccess(id)), 500)
-    setTimeout(() => dispatch(dropAppleToBasketAction(id)), 1000)
+    setTimeout(() => {
+      dispatch(dropAppleActionSuccess(id))
+      setTimeout(() => {
+        dispatch(dropAppleToBasketAction(id))
+      }, 1000)
+    }, 500)
   }
 }
