@@ -1,8 +1,11 @@
 import { combineReducers } from "redux";
-import applicationReducer from "./applicationReducer";
+
+import treeReducer from "./treeReducer";
+import appleReducer from "./appleReducer";
 
 const rootReducer = combineReducers({
-  applicationState: applicationReducer
+  treeState: treeReducer,
+  appleState: appleReducer
 })
 
 export default rootReducer

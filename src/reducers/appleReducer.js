@@ -1,8 +1,6 @@
-import * as actions from "../actions/applicationActions"
+import * as actions from "../actions/appleActions"
 
 export const initialState = {
-  shakingTree: false,
-  shakingTreeSuccess: false,
   apples: [
     {
       id: 0,
@@ -25,12 +23,8 @@ export const initialState = {
   ]
 }
 
-const applicationReducer = (state = initialState, action) => {
+const appleReducer = (state = initialState, action) => {
   switch (action.type) {
-    case actions.SHAKE_TREE_ACTION:
-      return { ...state, shakingTree: true }
-    case actions.SHAKE_TREE_ACTION_SUCCESS:
-      return { ...state, shakingTree: false, shakingTreeSuccess: true }
     case actions.DROP_APPLE_ACTION:
       let droppingApples = state.apples.map(apple => (apple.id === action.id) ? ({ ...apple, dropping: true }) : apple)
       return { ...state, apples: [...droppingApples] }
@@ -45,4 +39,4 @@ const applicationReducer = (state = initialState, action) => {
   }
 }
 
-export default applicationReducer
+export default appleReducer
